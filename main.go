@@ -12,7 +12,9 @@ import (
 func main() {
 	e := echo.New()
 
-	e.GET("/:statusCode", func(c echo.Context) error {
+	e.File("/", "public/index.html")
+
+	e.GET("/:statusCode/*", func(c echo.Context) error {
 		allowedCodes := statuscodes.GetAllowedCodes()
 		statusCode, _ := strconv.Atoi(c.Param("statusCode"))
 
