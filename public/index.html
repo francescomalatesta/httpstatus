@@ -1,153 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style media="screen">
+      header {
+        padding: 100px 0 50px 0;
+      }
 
-        <style media="screen">
-          header {
-              padding: 154px 0 100px;
-          }
+      section {
+        padding: 50px 0;
+      }
 
-          @media (min-width: 992px) {
-              header {
-                  padding: 156px 0 100px;
-              }
-          }
+      a{
+        transition: all .4s ease;
+      }
 
-          section {
-              padding: 150px 0;
-          }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="http://httpstatus.it">httpstatus.it</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto"></ul>
-                </div>
-            </div>
-        </nav>
+      a:hover{
+        color: #ef767a !important;
+      }
 
-        <header class="bg-primary text-white">
-            <div class="container text-center">
-                <h1>httpstatus.it</h1>
-                <p class="lead">a free status code &amp; responses generator</p>
-            </div>
-        </header>
+      @media (min-width: 992px) {
+        header {
+          padding: 150px 125px;
+        }
 
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1>Welcome!</h1>
-
-                        <p>I built this tool to test a couple of things when working in my development environment, in order to test some external service responses. I thought it could be useful to have a status code and responses generator always available without worrying about anything.</p>
-                        <p><b>Feel free to use it... for free! :)</b></p>
-                        <p>&nbsp;</p>
-
-                        <h4><b>How to Use It:</b></h4>
-                        <ul>
-                            <li>type your desired status code after the base URL of this site;</li>
-                            <li>use that URL;</li>
-                            <li>ta-dah!</li>
-                        </ul>
-
-                        <p><b>Note:</b> if you want, you can also add one or more segments after the status code. Something like <i><a
-                                        href="http://httpstatus.it/400/my/custom/segment">http://httpstatus.it/400/my/custom/segment</a></i> will be perfectly fine.</p>
-
-                        <h4><b>Example:</b></h4>
-                        <ul>
-                            <li><a href="/200">Generate a 200 Response</a></li>
-                            <li><a href="/400">Generate a 400 Response</a></li>
-                            <li><a href="/500">Generate a 500 Response</a></li>
-                        </ul>
-
-                        <h4><b>Supported Verbs:</b></h4>
-                        <ul>
-                            <li><i>GET</i></li>
-                            <li><i>POST</i></li>
-                            <li><i>PUT</i></li>
-                            <li><i>PATCH</i></li>
-                            <li><i>DELETE</i></li>
-                            <li><i>OPTIONS</i></li>
-                            <li><i>HEAD</i></li>
-                        </ul>
-
-                        <h4><b>Available Status Codes:</b></h4>
-                        <ul>
-                            <li><a href="/100">100 - Continue </a></li>
-                            <li><a href="/101">101 - Switching Protocols </a></li>
-                            <li><a href="/102">102 - Processing </a></li>
-                            <li><a href="/200">200 - OK </a></li>
-                            <li><a href="/201">201 - Created </a></li>
-                            <li><a href="/202">202 - Accepted </a></li>
-                            <li><a href="/203">203 - Non-Authoritative Information </a></li>
-                            <li><a href="/204">204 - No Content </a></li>
-                            <li><a href="/205">205 - Reset Content </a></li>
-                            <li><a href="/206">206 - Partial Content </a></li>
-                            <li><a href="/300">300 - Multiple Choices </a></li>
-                            <li><a href="/301">301 - Moved Permanently </a></li>
-                            <li><a href="/302">302 - Found </a></li>
-                            <li><a href="/303">303 - See Other </a></li>
-                            <li><a href="/304">304 - Not Modified </a></li>
-                            <li><a href="/305">305 - Use Proxy </a></li>
-                            <li><a href="/306">306 - Unused </a></li>
-                            <li><a href="/307">307 - Temporary Redirect </a></li>
-                            <li><a href="/308">308 - Permanent Redirect </a></li>
-                            <li><a href="/400">400 - Bad Request </a></li>
-                            <li><a href="/401">401 - Unauthorized </a></li>
-                            <li><a href="/402">402 - Payment Required </a></li>
-                            <li><a href="/403">403 - Forbidden </a></li>
-                            <li><a href="/404">404 - Not Found </a></li>
-                            <li><a href="/405">405 - Method Not Allowed </a></li>
-                            <li><a href="/406">406 - Not Acceptable </a></li>
-                            <li><a href="/407">407 - Proxy Authentication Required </a></li>
-                            <li><a href="/408">408 - Request Timeout </a></li>
-                            <li><a href="/409">409 - Conflict </a></li>
-                            <li><a href="/410">410 - Gone </a></li>
-                            <li><a href="/411">411 - Length Required </a></li>
-                            <li><a href="/412">412 - Precondition Failed </a></li>
-                            <li><a href="/413">413 - Request Entry Too Large </a></li>
-                            <li><a href="/414">414 - Request-URI Too Long </a></li>
-                            <li><a href="/415">415 - Unsupported Media Type </a></li>
-                            <li><a href="/416">416 - Requested Range Not Satisfiable </a></li>
-                            <li><a href="/417">417 - Expectation Failed </a></li>
-                            <li><a href="/418">418 - I'm a teapot </a></li>
-                            <li><a href="/422">422 - Unprocessable Entity </a></li>
-                            <li><a href="/428">428 - Precondition Required </a></li>
-                            <li><a href="/429">429 - Too Many Requests </a></li>
-                            <li><a href="/431">431 - Request Header Fields Too Large </a></li>
-                            <li><a href="/451">451 - Unavailable For Legal Reasons </a></li>
-                            <li><a href="/500">500 - Internal Server Error </a></li>
-                            <li><a href="/501">501 - Not Implemented </a></li>
-                            <li><a href="/502">502 - Bad Gateway </a></li>
-                            <li><a href="/503">503 - Service Unavailable </a></li>
-                            <li><a href="/504">504 - Gateway Timeout </a></li>
-                            <li><a href="/505">505 - HTTP Version Not Supported </a></li>
-                            <li><a href="/511">511 - Network Authentication Required </a></li>
-                            <li><a href="/520">520 - Web server is returning an unknown error </a></li>
-                            <li><a href="/522">522 - Connection timed out </a></li>
-                            <li><a href="/524">524 - A timeout occurred</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="py-5 bg-dark">
-            <div class="container">
-                <p class="m-0 text-center text-white">Copywut? &copy; <a target="_blank" href="http://francesco.codes">Francesco</a> - <a target="_blank" href="https://github.com/francescomalatesta/httpstatus">Github</a></p>
-            </div>
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    </body>
+        section{
+          padding: 85px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="http://httpstatus.it">httpstatus.it</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto"></ul>
+        </div>
+      </div>
+    </nav>
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>httpstatus.it</h1>
+        <p class="lead">a free status code &amp; responses generator</p>
+      </div>
+    </header>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-offset-2 col-lg-4 mx-auto">
+            <h1>Welcome!</h1>
+            <p>I built this tool to test a couple of things when working in my development environment, in order to test some external service responses. I thought it could be useful to have a status code and responses generator always available without worrying about anything.</p>
+            <p><b>Feel free to use it... for free! :)</b></p>
+            <p>&nbsp;</p>
+            <h4><b>How to Use It:</b></h4>
+            <ul>
+              <li>type your desired status code after the base URL of this site;</li>
+              <li>use that URL;</li>
+              <li>ta-dah!</li>
+            </ul>
+            <p><b>Note:</b> if you want, you can also add one or more segments after the status code. Something like <i><a href="http://httpstatus.it/400/my/custom/segment">http://httpstatus.it/400/my/custom/segment</a></i> will be perfectly fine.</p>
+            <h4><b>Example:</b></h4>
+            <ul>
+              <li><a href="/200">Generate a 200 Response</a></li>
+              <li><a href="/400">Generate a 400 Response</a></li>
+              <li><a href="/500">Generate a 500 Response</a></li>
+            </ul>
+            <h4><b>Supported Verbs:</b></h4>
+            <ul>
+              <li><i>GET</i></li>
+              <li><i>POST</i></li>
+              <li><i>PUT</i></li>
+              <li><i>PATCH</i></li>
+              <li><i>DELETE</i></li>
+              <li><i>OPTIONS</i></li>
+              <li><i>HEAD</i></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <h4><b>Available Status Codes:</b></h4>
+            <ul>
+              <li><a href="/100">100 - Continue </a></li>
+              <li><a href="/101">101 - Switching Protocols </a></li>
+              <li><a href="/102">102 - Processing </a></li>
+              <li><a href="/200">200 - OK </a></li>
+              <li><a href="/201">201 - Created </a></li>
+              <li><a href="/202">202 - Accepted </a></li>
+              <li><a href="/203">203 - Non-Authoritative Information </a></li>
+              <li><a href="/204">204 - No Content </a></li>
+              <li><a href="/205">205 - Reset Content </a></li>
+              <li><a href="/206">206 - Partial Content </a></li>
+              <li><a href="/300">300 - Multiple Choices </a></li>
+              <li><a href="/301">301 - Moved Permanently </a></li>
+              <li><a href="/302">302 - Found </a></li>
+              <li><a href="/303">303 - See Other </a></li>
+              <li><a href="/304">304 - Not Modified </a></li>
+              <li><a href="/305">305 - Use Proxy </a></li>
+              <li><a href="/306">306 - Unused </a></li>
+              <li><a href="/307">307 - Temporary Redirect </a></li>
+              <li><a href="/308">308 - Permanent Redirect </a></li>
+              <li><a href="/400">400 - Bad Request </a></li>
+              <li><a href="/401">401 - Unauthorized </a></li>
+              <li><a href="/402">402 - Payment Required </a></li>
+              <li><a href="/403">403 - Forbidden </a></li>
+              <li><a href="/404">404 - Not Found </a></li>
+              <li><a href="/405">405 - Method Not Allowed </a></li>
+              <li><a href="/406">406 - Not Acceptable </a></li>
+              <li><a href="/407">407 - Proxy Authentication Required </a></li>
+              <li><a href="/408">408 - Request Timeout </a></li>
+              <li><a href="/409">409 - Conflict </a></li>
+              <li><a href="/410">410 - Gone </a></li>
+              <li><a href="/411">411 - Length Required </a></li>
+              <li><a href="/412">412 - Precondition Failed </a></li>
+              <li><a href="/413">413 - Request Entry Too Large </a></li>
+              <li><a href="/414">414 - Request-URI Too Long </a></li>
+              <li><a href="/415">415 - Unsupported Media Type </a></li>
+              <li><a href="/416">416 - Requested Range Not Satisfiable </a></li>
+              <li><a href="/417">417 - Expectation Failed </a></li>
+              <li><a href="/418">418 - I'm a teapot </a></li>
+              <li><a href="/422">422 - Unprocessable Entity </a></li>
+              <li><a href="/428">428 - Precondition Required </a></li>
+              <li><a href="/429">429 - Too Many Requests </a></li>
+              <li><a href="/431">431 - Request Header Fields Too Large </a></li>
+              <li><a href="/451">451 - Unavailable For Legal Reasons </a></li>
+              <li><a href="/500">500 - Internal Server Error </a></li>
+              <li><a href="/501">501 - Not Implemented </a></li>
+              <li><a href="/502">502 - Bad Gateway </a></li>
+              <li><a href="/503">503 - Service Unavailable </a></li>
+              <li><a href="/504">504 - Gateway Timeout </a></li>
+              <li><a href="/505">505 - HTTP Version Not Supported </a></li>
+              <li><a href="/511">511 - Network Authentication Required </a></li>
+              <li><a href="/520">520 - Web server is returning an unknown error </a></li>
+              <li><a href="/522">522 - Connection timed out </a></li>
+              <li><a href="/524">524 - A timeout occurred</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copywut? &copy; <a target="_blank" href="http://francesco.codes">Francesco</a> - <a target="_blank" href="https://github.com/francescomalatesta/httpstatus">Github</a></p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
 </html>
